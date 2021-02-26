@@ -8,13 +8,50 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login.vue')
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/Register.vue')
+  },
+  {
+    path: '/oColumn/:id',
+    name: 'oColumn',
+    component: () => import('../views/oColumn.vue')
+  },
+  {
+    path: '/article/:id',
+    name: 'Article',
+    component: () => import('../views/Article.vue')
+  },
+  {
+    path: '/edit',
+    name: 'myEdit',
+    component: () => import('../views/myEdit.vue')
+  },
+  {
+    path: '/createArticle',
+    name: 'createArticle',
+    component: () => import('../views/createArticle.vue')
+  },
+  {
+    path: '/myCollect',
+    name: 'myCollect',
+    component: () => import('../views/myCollect.vue')
+  },
+  {
+    path: '/editArticle/:id',
+    name: 'editArticle',
+    component: () => import('../views/editArticle.vue')
+  },
+  {
+    path: '/createColumn',
+    name: 'createColumn',
+    component: () => import('../views/createColumn.vue')
+  },
 ]
 
 const router = createRouter({
